@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  ════════════════════════════════════════
+  SEO META TAGS — IMPLEMENTAR EN PRODUCCIÓN
+  TITLE: Ofertas Online | Electrodomésticos, Tecnología y Electrohogar | MásOnline
+  META DESC: Descuentos de hasta 30% en electrodomésticos, tecnología y electrohogar.
+  Cuotas sin interés con NaranjaX y más. MásOnline con envío o PickUp gratis.
+  CANONICAL: https://www.masonline.com.ar/ofertas
+  SCHEMA: ItemList · Offer · FAQPage
+  ════════════════════════════════════════
+-->
+<title>Ofertas Online | Electrodomésticos, Tecnología y Electrohogar | MásOnline</title>
+<meta name="description" content="Descuentos de hasta 30% en electrodomésticos, tecnología y electrohogar. Cuotas sin interés con NaranjaX y más. Comprá online en MásOnline con envío o PickUp gratis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --or:#E8400C;--ordk:#C03008;--bk:#1A1A1A;
+  --g1:#F5F5F5;--g2:#EEEEEE;--g4:#9E9E9E;--g7:#424242;--wh:#FFFFFF;
+  --rd:#D32F2F;--bl:#1565C0;
+  --dp:'Barlow Condensed',sans-serif;--bd:'Barlow',sans-serif;
+  --rm:8px;--rmd:12px;--rlg:16px;
+}
+body{font-family:var(--bd);background:var(--g1);color:var(--bk);line-height:1.5}
+
+/* NAVBAR */
+.nb{background:var(--wh);border-bottom:1px solid var(--g2);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100}
+.lg{font-family:var(--dp);font-size:1.9rem;font-weight:900;letter-spacing:-.5px}
+.lg span:first-child{color:var(--bk)}.lg span:last-child{color:var(--or)}
+.sr{flex:1;max-width:520px;margin:0 2rem;position:relative}
+.sr input{width:100%;padding:10px 16px 10px 40px;border:1.5px solid var(--g2);border-radius:24px;font-family:var(--bd);font-size:14px;background:var(--g1);outline:none;transition:border-color .2s}
+.sr input:focus{border-color:var(--or)}
+.sr svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--g4)}
+.na{display:flex;align-items:center;gap:1.5rem}
+.na a{text-decoration:none;color:var(--g7);font-size:13px;font-weight:500;display:flex;align-items:center;gap:5px;transition:color .2s}
+.na a:hover{color:var(--or)}
+
+/* SEC NAV */
+.sn{background:var(--wh);border-bottom:1px solid var(--g2);padding:0 2rem;display:flex;align-items:center;gap:2rem;height:44px;overflow-x:auto;scrollbar-width:none}
+.sn::-webkit-scrollbar{display:none}
+.sn a{text-decoration:none;font-size:13px;color:var(--g7);font-weight:500;white-space:nowrap;transition:color .2s;padding-bottom:2px}
+.sn a:hover{color:var(--or)}
+.sn a.act{color:var(--or);border-bottom:2px solid var(--or)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#111 0%,#2D1810 45%,#3D1F0D 100%);padding:3.5rem 2rem;position:relative;overflow:hidden;min-height:390px;display:flex;align-items:center}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 50%,rgba(232,64,12,.22) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(232,64,12,.1) 0%,transparent 40%)}
+.hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(232,64,12,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(232,64,12,.04) 1px,transparent 1px);background-size:55px 55px}
+.hi{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.heb{font-family:var(--dp);font-size:.9rem;font-weight:700;letter-spacing:4px;color:var(--or);text-transform:uppercase;margin-bottom:.75rem}
+.hero h1{font-family:var(--dp);font-size:4.8rem;font-weight:900;line-height:.9;color:#fff;text-transform:uppercase;letter-spacing:-2px;margin-bottom:1.25rem}
+.hero h1 .hl{color:var(--or)}
+.hd{font-size:1rem;color:rgba(255,255,255,.72);margin-bottom:1.75rem;max-width:400px;line-height:1.65}
+.hcta{display:inline-flex;align-items:center;gap:8px;background:var(--or);color:#fff;text-decoration:none;padding:12px 26px;border-radius:32px;font-family:var(--dp);font-size:.95rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;transition:background .2s,transform .15s}
+.hcta:hover{background:var(--ordk);transform:translateY(-2px)}
+.hst{display:flex;gap:2rem;margin-top:2rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.1)}
+.sv{font-family:var(--dp);font-size:2rem;font-weight:900;color:var(--or);line-height:1}
+.sl{font-size:.72rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+.hcs{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.hc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--rmd);padding:1.2rem;text-align:center;cursor:pointer;transition:background .2s}
+.hc:hover{background:rgba(255,255,255,.1)}
+.hc.ft{border-color:var(--or);background:rgba(232,64,12,.15)}
+.hcb{font-family:var(--dp);font-size:3rem;font-weight:900;color:var(--or);line-height:1}
+.hcb span{font-size:1.5rem}
+.hcl{font-size:.78rem;color:rgba(255,255,255,.65);margin-top:5px;font-weight:500}
+
+/* BANK STRIP */
+.bs{background:var(--wh);border-bottom:1px solid var(--g2);padding:.6rem 2rem;display:flex;align-items:center;gap:.8rem;overflow-x:auto;scrollbar-width:none}
+.bs::-webkit-scrollbar{display:none}
+.bsl{font-size:11px;font-weight:700;color:var(--g4);text-transform:uppercase;letter-spacing:1px;white-space:nowrap;margin-right:.4rem}
+.bb{display:flex;align-items:center;gap:6px;background:var(--g1);border:1px solid var(--g2);border-radius:32px;padding:5px 12px;white-space:nowrap;cursor:pointer;transition:border-color .2s}
+.bb:hover{border-color:var(--or)}
+.bbp{font-family:var(--dp);font-size:1.1rem;font-weight:900;color:var(--or)}
+.bbi{font-size:10px;color:var(--g7);line-height:1.3}
+.bbn{font-weight:700;font-size:11px;color:var(--bk)}
+
+/* LAYOUT */
+.wp{max-width:1200px;margin:0 auto;padding:2rem}
+
+/* PILLS */
+.cp{display:flex;gap:.6rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.pi{display:flex;align-items:center;gap:5px;padding:7px 14px;background:var(--wh);border:1.5px solid var(--g2);border-radius:32px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;color:var(--g7)}
+.pi:hover,.pi.act{border-color:var(--or);color:var(--or);background:#FFF5F2}
+
+/* SEC HEADER */
+.sh{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem}
+.sh h2{font-family:var(--dp);font-size:1.85rem;font-weight:800;color:var(--bk);text-transform:uppercase;letter-spacing:-.5px;line-height:1}
+.sh h2 em{color:var(--or);font-style:normal}
+.sa{font-size:13px;color:var(--or);text-decoration:none;font-weight:600;white-space:nowrap}
+.sa:hover{opacity:.7}
+
+/* H3 */
+.sh3{font-family:var(--dp);font-size:1.05rem;font-weight:700;text-transform:uppercase;color:var(--g7);letter-spacing:.5px;margin-bottom:.85rem;margin-top:.2rem}
+
+/* PRODUCT GRID */
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:.85rem;margin-bottom:1.85rem}
+.pc{background:var(--wh);border-radius:var(--rmd);overflow:hidden;border:1px solid var(--g2);transition:box-shadow .2s,transform .2s;cursor:pointer;text-decoration:none;color:inherit;display:block;position:relative}
+.pc:hover{box-shadow:0 8px 24px rgba(0,0,0,.12);transform:translateY(-3px)}
+.pi2{width:100%;aspect-ratio:1;background:var(--g1);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pi2 svg{width:75%;height:75%}
+.db{position:absolute;top:8px;left:8px;background:var(--rd);color:#fff;font-family:var(--dp);font-size:.82rem;font-weight:800;padding:2px 6px;border-radius:5px;line-height:1.5;z-index:2}
+.dbbl{position:absolute;top:8px;left:8px;background:var(--bl);color:#fff;font-family:var(--dp);font-size:.75rem;font-weight:800;padding:2px 6px;border-radius:5px;line-height:1.5;z-index:2}
+.nxb{position:absolute;bottom:8px;left:8px;background:var(--or);color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;line-height:1.6;z-index:2}
+.ab{position:absolute;top:8px;right:8px;width:29px;height:29px;background:var(--wh);border:1.5px solid var(--g2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.05rem;color:var(--or);cursor:pointer;transition:all .2s;z-index:2;text-decoration:none}
+.ab:hover{background:var(--or);color:#fff;border-color:var(--or)}
+.pif{padding:.85rem}
+.pbr{font-size:10px;font-weight:700;color:var(--g4);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.pn{font-size:12px;color:var(--g7);line-height:1.4;margin-bottom:.6rem;min-height:2.8em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.po{font-size:11px;color:var(--g4);text-decoration:line-through;margin-bottom:2px}
+.pp{font-family:var(--dp);font-size:1.35rem;font-weight:800;color:var(--bk);line-height:1;margin-bottom:3px}
+.pp .pct{font-size:.78rem;background:var(--rd);color:#fff;padding:2px 5px;border-radius:4px;margin-left:4px;font-weight:700}
+.pp .pctb{font-size:.78rem;background:var(--bl);color:#fff;padding:2px 5px;border-radius:4px;margin-left:4px;font-weight:700}
+.pcu{font-size:11px;color:var(--g7)}
+.pcu strong{color:var(--or)}
+.pnet{font-size:10px;color:var(--g4);margin-top:1px}
+.tpago{display:inline-block;background:var(--bl);color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;margin-top:4px}
+
+/* BANNER DUPLEX */
+.bd{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin:1.5rem 0}
+.bc{border-radius:var(--rlg);overflow:hidden;position:relative;min-height:180px;display:flex;align-items:flex-end;padding:1.3rem;cursor:pointer;text-decoration:none}
+.bc-bl{background:linear-gradient(135deg,#1A237E 0%,#3949AB 100%)}
+.bc-tl{background:linear-gradient(135deg,#004D40 0%,#00897B 100%)}
+.bc::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 60%)}
+.bcc{position:relative;z-index:2}
+.bcc h2{font-family:var(--dp);font-size:1.75rem;font-weight:800;color:#fff;text-transform:uppercase;line-height:1;margin-bottom:4px}
+.bcc p{font-size:.83rem;color:rgba(255,255,255,.8);margin-bottom:.8rem}
+.bcta{display:inline-block;background:#fff;color:var(--bk);font-family:var(--dp);font-size:.82rem;font-weight:700;padding:6px 16px;border-radius:24px;text-decoration:none;text-transform:uppercase;transition:opacity .2s}
+.bcta:hover{opacity:.85}
+
+/* ELECTROHOGAR BANNER */
+.ehb{background:linear-gradient(135deg,#E65100 0%,#BF360C 100%);border-radius:var(--rlg);padding:1.4rem 1.8rem;margin-bottom:1.3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ehb-t .eyt{font-family:var(--dp);font-size:.82rem;font-weight:700;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:2px;margin-bottom:3px}
+.ehb-t .eht{font-family:var(--dp);font-size:2rem;font-weight:900;color:#fff;text-transform:uppercase;line-height:1}
+.ehb-t .ehs{font-size:.87rem;color:rgba(255,255,255,.75);margin-top:5px}
+.ehb-pcts{display:flex;gap:.85rem}
+.ehpct{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:var(--rmd);padding:.8rem 1.1rem;text-align:center}
+.ehpct .n{font-family:var(--dp);font-size:2rem;font-weight:900;color:#fff;line-height:1}
+.ehpct .n span{font-size:1.1rem}
+.ehpct .l{font-size:10px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
+
+/* FINANCING */
+.fb{background:var(--bk);border-radius:var(--rlg);padding:2.1rem;margin:1.5rem 0;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.fb h2{font-family:var(--dp);font-size:2.1rem;font-weight:900;color:#fff;text-transform:uppercase;line-height:1;margin-bottom:.6rem}
+.fb h2 em{color:var(--or);font-style:normal}
+.fb p{color:rgba(255,255,255,.6);font-size:.88rem}
+.cr{display:flex;gap:.8rem}
+.cpf{text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--rmd);padding:.85rem 1.1rem}
+.cn{font-family:var(--dp);font-size:2.2rem;font-weight:900;color:var(--or);line-height:1}
+.cl{font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
+
+/* FAQ */
+.faq{margin:1.5rem 0}
+.faq>h2{font-family:var(--dp);font-size:1.85rem;font-weight:800;text-transform:uppercase;margin-bottom:1rem;color:var(--bk)}
+.fi{background:var(--wh);border-radius:var(--rmd);border:1px solid var(--g2);margin-bottom:.6rem;overflow:hidden}
+.fq{padding:.95rem 1.3rem;font-size:.92rem;font-weight:600;color:var(--bk);cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;transition:color .2s}
+.fq:hover{color:var(--or)}
+.fq::after{content:'+';font-size:1.3rem;font-weight:300;color:var(--or);flex-shrink:0}
+.fi.op .fq::after{content:'−'}
+.fa{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .2s;padding:0 1.3rem;font-size:.86rem;color:var(--g7);line-height:1.7}
+.fi.op .fa{max-height:200px;padding:0 1.3rem .95rem}
+
+/* SEO BLOCK */
+.sb{background:var(--wh);border-radius:var(--rlg);padding:2.1rem;margin:1.5rem 0;border:1px solid var(--g2)}
+.sb h2{font-family:var(--dp);font-size:1.5rem;font-weight:800;text-transform:uppercase;margin-bottom:.85rem;color:var(--bk)}
+.sb p{font-size:.88rem;color:var(--g7);line-height:1.8;margin-bottom:.85rem}
+.sb ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-top:.6rem}
+.sb ul li{font-size:.86rem;color:var(--g7);padding-left:1rem;position:relative}
+.sb ul li::before{content:'›';position:absolute;left:0;color:var(--or);font-weight:700}
+
+/* NEWSLETTER */
+.nl{background:var(--or);padding:1.35rem 2rem;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
+.nl p{color:#fff;font-size:.92rem;font-weight:600}
+.nlf{display:flex;gap:.45rem}
+.nlf input{padding:9px 17px;border:none;border-radius:24px;font-family:var(--bd);font-size:13px;width:240px;outline:none}
+.nlf button{padding:9px 20px;background:var(--bk);color:#fff;border:none;border-radius:24px;font-family:var(--dp);font-size:.83rem;font-weight:700;text-transform:uppercase;cursor:pointer;letter-spacing:.5px;transition:opacity .2s}
+.nlf button:hover{opacity:.8}
+
+/* FOOTER */
+.ft{background:var(--wh);border-top:1px solid var(--g2);padding:2.4rem 2rem 1.6rem;margin-top:2.4rem}
+.ftg{max-width:1200px;margin:0 auto 1.6rem;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.ft h3{font-family:var(--dp);font-size:.92rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:.85rem;color:var(--bk)}
+.ft ul{list-style:none}
+.ft ul li{margin-bottom:.42rem}
+.ft ul a{text-decoration:none;font-size:12.5px;color:var(--g7);transition:color .2s}
+.ft ul a:hover{color:var(--or)}
+.ftb{max-width:1200px;margin:0 auto;padding-top:1.2rem;border-top:1px solid var(--g2);display:flex;justify-content:space-between;align-items:center}
+.flg{font-family:var(--dp);font-size:1.3rem;font-weight:900}
+.flg span:first-child{color:var(--bk)}.flg span:last-child{color:var(--or)}
+.fcp{font-size:11px;color:var(--g4)}
+.plg{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:.8rem}
+.plgi{background:var(--g1);border:1px solid var(--g2);border-radius:5px;padding:3px 8px;font-size:10px;font-weight:700;color:var(--g7)}
+.sec{margin-bottom:2.1rem}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nb">
+  <div class="lg"><span>Más</span><span>Online</span></div>
+  <div class="sr">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="¿Qué estás buscando?">
+  </div>
+  <div class="na">
+    <a href="#"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mi Cuenta</a>
+    <a href="#"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Favoritos</a>
+    <a href="#"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>Carrito</a>
+  </div>
+</nav>
+<div class="sn">
+  <a href="#">Folletos</a><a href="#">ToMás</a><a href="#">Más Farma</a><a href="#">Más Club</a><a href="#">Más Autocenter</a><a href="#" class="act">Ofertas</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hgrid"></div>
+  <div class="hi">
+    <div>
+      <p class="heb">↯ Ofertas exclusivas</p>
+      <h1>Las Mejores <span class="hl">Ofertas</span> Online</h1>
+      <p class="hd">Descuentos reales en electrodomésticos, tecnología y electrohogar. Pagá en cuotas sin interés con tu tarjeta favorita.</p>
+      <a href="#ofertas" class="hcta">Ver todas las ofertas <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <div class="hst">
+        <div><div class="sv">30%</div><div class="sl">Descuento máx.</div></div>
+        <div><div class="sv">6 CSI</div><div class="sl">Cuotas sin interés</div></div>
+        <div><div class="sv">+500</div><div class="sl">Productos en oferta</div></div>
+      </div>
+    </div>
+    <div class="hcs">
+      <div class="hc ft"><div class="hcb"><span>hasta</span><br>30<span>%</span></div><div class="hcl">Electro &amp; Tecno</div></div>
+      <div class="hc"><div class="hcb"><span>hasta</span><br>25<span>%</span></div><div class="hcl">Electrohogar</div></div>
+      <div class="hc"><div class="hcb"><span>20%</span></div><div class="hcl">En 1 pago · Smart TVs</div></div>
+      <div class="hc"><div class="hcb">6<span>CSI</span></div><div class="hcl">Cuotas sin interés</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BANK STRIP -->
+<div class="bs">
+  <span class="bsl">Beneficios:</span>
+  <div class="bb"><span class="bbn">NaranjaX</span><span class="bbp">30%</span><span class="bbi">Débito/Crédito · Martes</span></div>
+  <div class="bb"><span class="bbn">Hipotecario</span><span class="bbp">25%</span><span class="bbi">MODO · Martes</span></div>
+  <div class="bb"><span class="bbn">Supervielle</span><span class="bbp">20%</span><span class="bbi">Débito Jubilados</span></div>
+  <div class="bb"><span class="bbn">Visa</span><span class="bbp">12 CSI</span><span class="bbi">Sin interés</span></div>
+</div>
+
+<main class="wp" id="ofertas">
+  <!-- PILLS -->
+  <div class="cp">
+    <a href="#" class="pi act">Todas las ofertas</a>
+    <a href="#electro" class="pi">Electrodomésticos</a>
+    <a href="#tecno" class="pi">Tecnología</a>
+    <a href="#electrohogar" class="pi">Electrohogar</a>
+    <a href="#calef" class="pi">Calefacción</a>
+    <a href="#hogar" class="pi">Hogar y muebles</a>
+  </div>
+
+  <!-- ══ H2: ELECTRODOMÉSTICOS ══ -->
+  <section class="sec" id="electro">
+    <div class="sh"><h2>Ofertas en <em>Electrodomésticos</em></h2><a href="https://www.masonline.com.ar/electrodomesticos/d" class="sa" target="_blank">Ver todos →</a></div>
+
+    <p class="sh3">Aires Acondicionados en Oferta</p>
+    <div class="pg">
+
+      <a href="https://www.masonline.com.ar/aire-acondicionado-philco-inverter-frio-calor-8750w/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 160 120" fill="none"><rect x="8" y="32" width="144" height="52" rx="10" fill="#E3F2FD"/><rect x="14" y="37" width="132" height="42" rx="7" fill="#90CAF9"/><rect x="20" y="43" width="76" height="7" rx="3" fill="#BBDEFB"/><rect x="20" y="54" width="48" height="5" rx="2" fill="#BBDEFB"/><circle cx="128" cy="56" r="6" fill="#1565C0"/><rect x="108" y="84" width="16" height="20" rx="4" fill="#78909C"/></svg>
+          <div class="db">30% OFF</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Philco</div>
+          <div class="pn">Aire Acondicionado Split Inverter Philco 8750W Frío Calor Phin90hc3awfpi</div>
+          <div class="po">$ 2.299.999</div>
+          <div class="pp">$ 1.609.999 <span class="pct">30%</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 268.333</strong></div>
+          <div class="pnet">$ 1.900.825 sin imp. nacionales</div>
+        </div>
+      </a>
+
+      <a href="https://www.masonline.com.ar/aire-acondicionado-philco-3400w-frio-calor-phs32ha4cn-2/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 160 120" fill="none"><rect x="8" y="32" width="144" height="52" rx="10" fill="#E8EAF6"/><rect x="14" y="37" width="132" height="42" rx="7" fill="#9FA8DA"/><rect x="20" y="43" width="72" height="7" rx="3" fill="#C5CAE9"/><rect x="20" y="54" width="44" height="5" rx="2" fill="#C5CAE9"/><circle cx="128" cy="56" r="6" fill="#3949AB"/><rect x="108" y="84" width="16" height="20" rx="4" fill="#78909C"/></svg>
+          <div class="db">30% OFF</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Philco</div>
+          <div class="pn">Aire Acondicionado Split Philco 3350W Frío Calor Phs32ha4cn</div>
+          <div class="po">$ 899.999</div>
+          <div class="pp">$ 629.999 <span class="pct">30%</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 104.999</strong></div>
+        </div>
+      </a>
+
+      <a href="https://www.masonline.com.ar/aire-acondicionado-philco-inverter-3550w-blanco-phin35ha3bn-2/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 160 120" fill="none"><rect x="8" y="32" width="144" height="52" rx="10" fill="#F5F5F5"/><rect x="14" y="37" width="132" height="42" rx="7" fill="#E0E0E0"/><rect x="20" y="43" width="75" height="7" rx="3" fill="#F5F5F5"/><rect x="20" y="54" width="50" height="5" rx="2" fill="#F5F5F5"/><circle cx="128" cy="56" r="6" fill="#757575"/><rect x="108" y="84" width="16" height="20" rx="4" fill="#9E9E9E"/></svg>
+          <div class="db">30% OFF</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Philco</div>
+          <div class="pn">Aire Acondicionado Split Inverter Philco 3550W Blanco Phin35ha3bn</div>
+          <div class="po">$ 999.999</div>
+          <div class="pp">$ 699.999 <span class="pct">30%</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 116.666</strong></div>
+        </div>
+      </a>
+
+      <a href="https://www.masonline.com.ar/aire-acondicionado-hyundai-split-inverter-frio-calor-5000-frigorias-hy11inv-5000fcw/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 160 120" fill="none"><rect x="8" y="32" width="144" height="52" rx="10" fill="#E3F2FD"/><rect x="14" y="37" width="132" height="42" rx="7" fill="#64B5F6"/><rect x="20" y="43" width="70" height="7" rx="3" fill="#BBDEFB"/><rect x="20" y="54" width="46" height="5" rx="2" fill="#BBDEFB"/><circle cx="128" cy="56" r="6" fill="#0D47A1"/><rect x="108" y="84" width="16" height="20" rx="4" fill="#78909C"/></svg>
+          <div class="db">30% OFF</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Hyundai</div>
+          <div class="pn">Aire Acondicionado Split Inverter Hyundai 5000W Frío Calor Hy11inv</div>
+          <div class="po">$ 1.399.999</div>
+          <div class="pp">$ 979.999 <span class="pct">30%</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 163.333</strong></div>
+          <div class="pnet">$ 1.157.023 sin imp. nacionales</div>
+        </div>
+      </a>
+    </div>
+
+    <p class="sh3">Heladeras y Freezers con Descuento</p>
+    <div class="pg">
+
+      <a href="https://www.masonline.com.ar/heladera-no-frost-inverter-bgh-338-l-inox-brt330i1a/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 100 150" fill="none"><rect x="12" y="8" width="76" height="134" rx="8" fill="#ECEFF1"/><rect x="17" y="13" width="66" height="124" rx="6" fill="#CFD8DC"/><rect x="20" y="15" width="60" height="58" rx="3" fill="#B0BEC5"/><rect x="20" y="77" width="60" height="57" rx="3" fill="#90A4AE"/><rect x="90" y="48" width="7" height="22" rx="3" fill="#78909C"/><rect x="90" y="84" width="7" height="18" rx="3" fill="#78909C"/></svg>
+          <div class="db">20% OFF</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">BGH</div>
+          <div class="pn">Heladera No Frost Inverter BGH 338L Inox Brt330i1a</div>
+          <div class="po">$ 1.299.999</div>
+          <div class="pp">$ 1.039.999 <span class="pct">20%</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 173.333</strong></div>
+          <div class="pnet">$ 1.092.325 sin imp. nacionales</div>
+        </div>
+      </a>
+
+      <a href="https://www.masonline.com.ar/freezer-neba-f400-384l-blanco-2/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 160 110" fill="none"><rect x="10" y="18" width="140" height="68" rx="10" fill="#F5F5F5"/><rect x="16" y="24" width="128" height="56" rx="7" fill="#E0E0E0"/><rect x="22" y="30" width="116" height="44" rx="5" fill="#EEEEEE"/><rect x="38" y="86" width="30" height="10" rx="3" fill="#BDBDBD"/><rect x="92" y="86" width="30" height="10" rx="3" fill="#BDBDBD"/></svg>
+          <div class="db">25% OFF</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Neba</div>
+          <div class="pn">Freezer Neba F400 384L Blanco</div>
+          <div class="po">$ 899.999</div>
+          <div class="pp">$ 674.999 <span class="pct">25%</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 112.499</strong></div>
+          <div class="pnet">$ 743.800 sin imp. nacionales</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- BANNER DUPLEX -->
+  <div class="bd">
+    <a href="#tecno" class="bc bc-bl"><div class="bcc"><h2>Tecnología</h2><p>Smart TVs, celulares y más con hasta 30% OFF</p><span class="bcta">Ver ofertas →</span></div></a>
+    <a href="#electrohogar" class="bc bc-tl"><div class="bcc"><h2>Electrohogar</h2><p>Calefacción y climatización con descuentos reales</p><span class="bcta">Ver ofertas →</span></div></a>
+  </div>
+
+  <!-- ══ H2: TECNOLOGÍA ══ -->
+  <section class="sec" id="tecno">
+    <div class="sh"><h2>Ofertas en <em>Tecnología</em></h2><a href="https://www.masonline.com.ar/tecnologia/d" class="sa" target="_blank">Ver todos →</a></div>
+
+    <p class="sh3">TV y Smart TV — 20% adicional en 1 pago</p>
+    <div class="pg">
+
+      <a href="https://www.masonline.com.ar/smart-tv-led-65-philips-qled-4k-ultra-hd-65pud8250-77/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 160 120" fill="none"><rect x="10" y="12" width="140" height="80" rx="5" fill="#212121"/><rect x="16" y="18" width="128" height="68" rx="3" fill="#1565C0"/><rect x="20" y="22" width="120" height="60" rx="2" fill="#1976D2"/><text x="80" y="55" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="sans-serif">QLED 4K · 65"</text><rect x="58" y="92" width="44" height="5" rx="2" fill="#424242"/><rect x="70" y="97" width="20" height="12" rx="2" fill="#424242"/></svg>
+          <div class="dbbl">20% EN 1 PAGO</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Philips</div>
+          <div class="pn">Smart TV LED 65" Philips QLED 4K Ultra HD 65PUD8250/77</div>
+          <div class="po">$ 1.499.999</div>
+          <div class="pp">$ 1.199.999 <span class="pctb">20% 1 pago</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 199.999</strong></div>
+          <div class="tpago">20% OFF pagando en 1 cuota</div>
+        </div>
+      </a>
+
+      <a href="https://www.masonline.com.ar/smart-tv-philips-70-led-70pud7908-77-4k-ultra-hd-2/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 160 120" fill="none"><rect x="8" y="12" width="144" height="82" rx="5" fill="#1A1A1A"/><rect x="14" y="18" width="132" height="70" rx="3" fill="#0277BD"/><rect x="18" y="22" width="124" height="62" rx="2" fill="#0288D1"/><text x="80" y="56" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="sans-serif">4K Ultra HD · 70"</text><rect x="56" y="94" width="48" height="5" rx="2" fill="#424242"/><rect x="68" y="99" width="24" height="11" rx="2" fill="#424242"/></svg>
+          <div class="dbbl">20% EN 1 PAGO</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Philips</div>
+          <div class="pn">Smart TV Philips 70" LED 70PUD7908/77 4K Ultra HD</div>
+          <div class="po">$ 1.799.999</div>
+          <div class="pp">$ 1.439.999 <span class="pctb">20% 1 pago</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 239.999</strong></div>
+          <div class="tpago">20% OFF pagando en 1 cuota</div>
+        </div>
+      </a>
+
+      <a href="https://www.masonline.com.ar/led-75-4k-philips-75pud8507-77-2/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 160 120" fill="none"><rect x="6" y="12" width="148" height="84" rx="5" fill="#0D1B2A"/><rect x="12" y="18" width="136" height="72" rx="3" fill="#003566"/><rect x="16" y="22" width="128" height="64" rx="2" fill="#001D3D"/><text x="80" y="58" text-anchor="middle" font-size="10" fill="#FFD60A" font-weight="bold" font-family="sans-serif">4K Android · 75"</text><rect x="54" y="96" width="52" height="5" rx="2" fill="#2C2C2C"/><rect x="66" y="101" width="28" height="10" rx="2" fill="#2C2C2C"/></svg>
+          <div class="dbbl">20% EN 1 PAGO</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Philips</div>
+          <div class="pn">Smart TV LED 75" 4K Android Philips 75PUD8507/77</div>
+          <div class="po">$ 2.299.999</div>
+          <div class="pp">$ 1.839.999 <span class="pctb">20% 1 pago</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 306.666</strong></div>
+          <div class="tpago">20% OFF pagando en 1 cuota</div>
+        </div>
+      </a>
+    </div>
+
+    <p class="sh3">Celulares y Telefonía</p>
+    <div class="pg">
+
+      <a href="https://www.masonline.com.ar/celular-motorola-moto-e15-64gb-azul/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 80 140" fill="none"><rect x="8" y="5" width="64" height="130" rx="12" fill="#1565C0"/><rect x="13" y="15" width="54" height="110" rx="8" fill="#0D47A1"/><rect x="15" y="17" width="50" height="106" rx="7" fill="#1976D2"/><rect x="28" y="120" width="24" height="4" rx="2" fill="#0D47A1"/><circle cx="40" cy="11" r="2.5" fill="#0D47A1"/></svg>
+          <div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Motorola</div>
+          <div class="pn">Celular Motorola Moto E15 64GB Azul</div>
+          <div class="pp">$ 149.999</div>
+          <div class="pcu">6 cuotas de <strong>$ 24.999</strong></div>
+        </div>
+      </a>
+
+      <a href="https://www.masonline.com.ar/celular-samsung-a56-5g-6-7-8-256-gb-gris-claro/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 80 140" fill="none"><rect x="6" y="4" width="68" height="132" rx="14" fill="#B0BEC5"/><rect x="11" y="13" width="58" height="114" rx="10" fill="#90A4AE"/><rect x="13" y="15" width="54" height="110" rx="9" fill="#ECEFF1"/><rect x="26" y="122" width="28" height="4" rx="2" fill="#B0BEC5"/><rect x="30" y="8" width="20" height="3" rx="1.5" fill="#90A4AE"/><circle cx="60" cy="26" r="7" fill="#607D8B"/><circle cx="60" cy="38" r="5" fill="#546E7A"/><circle cx="60" cy="48" r="4" fill="#455A64"/></svg>
+          <div class="db">OFERTA</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Samsung</div>
+          <div class="pn">Celular Samsung A56 5G 6.7" 8/256 GB Gris Claro</div>
+          <div class="pp">$ 899.999</div>
+          <div class="pcu">6 cuotas de <strong>$ 149.999</strong></div>
+        </div>
+      </a>
+
+      <a href="https://www.masonline.com.ar/celular-samsung-a36-6-7-8-256-gb-blanco/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 80 140" fill="none"><rect x="6" y="4" width="68" height="132" rx="14" fill="#F5F5F5"/><rect x="11" y="13" width="58" height="114" rx="10" fill="#EEEEEE"/><rect x="13" y="15" width="54" height="110" rx="9" fill="#FAFAFA"/><rect x="26" y="122" width="28" height="4" rx="2" fill="#E0E0E0"/><rect x="30" y="8" width="20" height="3" rx="1.5" fill="#E0E0E0"/><circle cx="60" cy="26" r="7" fill="#BDBDBD"/><circle cx="60" cy="38" r="5" fill="#9E9E9E"/><circle cx="60" cy="48" r="4" fill="#757575"/></svg>
+          <div class="db">OFERTA</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Samsung</div>
+          <div class="pn">Celular Samsung A36 6.7" 8/256 GB Blanco</div>
+          <div class="pp">$ 749.999</div>
+          <div class="pcu">6 cuotas de <strong>$ 124.999</strong></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══ H2: ELECTROHOGAR ══ -->
+  <section class="sec" id="electrohogar">
+    <div class="sh"><h2>Ofertas en <em>Electrohogar</em></h2><a href="https://www.masonline.com.ar/electrodomesticos/d" class="sa" target="_blank">Ver todos →</a></div>
+
+    <!-- ELECTROHOGAR PROMO BANNER -->
+    <div class="ehb">
+      <div class="ehb-t">
+        <div class="eyt">Equipá tu hogar</div>
+        <div class="eht">Calefacción y Climatización</div>
+        <div class="ehs">Hasta 30% OFF en calefactores, caloventores y convectores.</div>
+      </div>
+      <div class="ehb-pcts">
+        <div class="ehpct"><div class="n">30<span>%</span></div><div class="l">Gas</div></div>
+        <div class="ehpct"><div class="n">20<span>%</span></div><div class="l">Eléctrico</div></div>
+      </div>
+    </div>
+
+    <p class="sh3" id="calef">Calefacción en Oferta</p>
+    <div class="pg">
+
+      <!-- Calefactor Longvie 3000Kcal -->
+      <a href="https://www.masonline.com.ar/calefactor-longvie-tiro-balanceado-eba3s-3000kc-2/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 110 150" fill="none"><rect x="18" y="10" width="74" height="125" rx="8" fill="#EFEBE9"/><rect x="24" y="16" width="62" height="113" rx="6" fill="#D7CCC8"/><rect x="30" y="25" width="50" height="68" rx="4" fill="#BCAAA4"/><rect x="37" y="30" width="7" height="58" rx="2" fill="#8D6E63"/><rect x="48" y="30" width="7" height="58" rx="2" fill="#8D6E63"/><rect x="59" y="30" width="7" height="58" rx="2" fill="#8D6E63"/><rect x="28" y="100" width="54" height="9" rx="3" fill="#A1887F"/><rect x="38" y="116" width="34" height="12" rx="4" fill="#795548"/></svg>
+          <div class="db">30% OFF</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Longvie</div>
+          <div class="pn">Calefactor Longvie Tiro Balanceado EBA3S 3000Kcal</div>
+          <div class="po">$ 499.999</div>
+          <div class="pp">$ 349.999 <span class="pct">30%</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 58.333</strong></div>
+        </div>
+      </a>
+
+      <!-- Caloventor Liliana PTC617 -->
+      <a href="https://www.masonline.com.ar/caloventor-liliana-forzahot-ptc617-2/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 130 130" fill="none"><rect x="14" y="12" width="102" height="90" rx="10" fill="#FFF3E0"/><rect x="20" y="18" width="90" height="78" rx="7" fill="#FFE0B2"/><rect x="28" y="26" width="74" height="62" rx="5" fill="#FFCC80"/><rect x="36" y="34" width="58" height="46" rx="4" fill="#FFB74D"/><rect x="44" y="42" width="42" height="30" rx="3" fill="#FFA726"/><rect x="12" y="108" width="106" height="14" rx="5" fill="#F57C00"/><rect x="30" y="122" width="70" height="7" rx="3" fill="#E65100"/></svg>
+          <div class="db">30% OFF</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Liliana</div>
+          <div class="pn">Caloventor Liliana Forzahot PTC617</div>
+          <div class="po">$ 79.999</div>
+          <div class="pp">$ 55.999 <span class="pct">30%</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 9.333</strong></div>
+        </div>
+      </a>
+
+      <!-- Convector Axel AX-COT100 2000W -->
+      <a href="https://www.masonline.com.ar/convector-axel-ax-cot100-con-turbo-2000w-2/p" class="pc" target="_blank" rel="noopener">
+        <div class="pi2">
+          <svg viewBox="0 0 160 110" fill="none"><rect x="8" y="18" width="144" height="68" rx="8" fill="#E8EAF6"/><rect x="14" y="24" width="132" height="56" rx="6" fill="#C5CAE9"/><rect x="20" y="30" width="120" height="44" rx="4" fill="#9FA8DA"/><rect x="28" y="38" width="9" height="28" rx="2" fill="#5C6BC0"/><rect x="41" y="38" width="9" height="28" rx="2" fill="#5C6BC0"/><rect x="54" y="38" width="9" height="28" rx="2" fill="#5C6BC0"/><rect x="67" y="38" width="9" height="28" rx="2" fill="#5C6BC0"/><rect x="106" y="42" width="24" height="20" rx="4" fill="#3F51B5"/><rect x="8" y="86" width="144" height="10" rx="4" fill="#C5CAE9"/></svg>
+          <div class="db">20% OFF</div><div class="nxb">NX 6 CSI</div><div class="ab">+</div>
+        </div>
+        <div class="pif">
+          <div class="pbr">Axel</div>
+          <div class="pn">Convector Axel AX-COT100 con Turbo 2000W</div>
+          <div class="po">$ 99.999</div>
+          <div class="pp">$ 79.999 <span class="pct">20%</span></div>
+          <div class="pcu">6 cuotas de <strong>$ 13.333</strong></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FINANCING -->
+  <div class="fb">
+    <div>
+      <h2>Pagá en <em>Cuotas</em> Sin Interés</h2>
+      <p>Comprá lo que necesitás y pagalo cómodamente. Usá tu tarjeta de crédito y aprovechá la financiación especial en miles de productos seleccionados.</p>
+    </div>
+    <div class="cr">
+      <div class="cpf"><div class="cn">6</div><div class="cl">cuotas<br>sin interés</div></div>
+      <div class="cpf"><div class="cn">12</div><div class="cl">cuotas<br>NaranjaX</div></div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Preguntas Frecuentes sobre Nuestras Ofertas</h2>
+    <div class="fi"><div class="fq">¿Cuánto dura la oferta?</div><div class="fa">Las ofertas tienen vigencia limitada indicada en cada producto. Te recomendamos no esperar para no perder el descuento. Podés activar notificaciones por WhatsApp para enterarte antes que nadie.</div></div>
+    <div class="fi"><div class="fq">¿Cómo pago en cuotas sin interés?</div><div class="fa">Seleccioná tu producto, elegí el método de pago con tarjeta de crédito y seleccioná la cantidad de cuotas sin interés disponibles. La financiación especial aplica en productos seleccionados con las tarjetas participantes.</div></div>
+    <div class="fi"><div class="fq">¿Qué significa "20% OFF en 1 pago" en los Smart TVs?</div><div class="fa">Los modelos Smart TV Philips tienen un descuento adicional del 20% cuando abonás el total de una sola vez (en 1 pago) con tarjeta de crédito o débito. Es acumulable con los beneficios bancarios vigentes del día.</div></div>
+    <div class="fi"><div class="fq">¿Tienen envío gratis?</div><div class="fa">Sí, muchos productos tienen envío gratis a domicilio. También podés retirar sin cargo en la sucursal ChangoMás más cercana con la opción PickUp: al llegar envianos un WhatsApp y llevamos el pedido hasta tu auto.</div></div>
+    <div class="fi"><div class="fq">¿Puedo devolver un producto comprado en oferta?</div><div class="fa">Sí, los productos comprados en oferta tienen las mismas condiciones de cambio y devolución. Consultá plazos y condiciones en la sección de Cambios y Devoluciones.</div></div>
+  </section>
+
+  <!-- SEO TEXT -->
+  <div class="sb">
+    <h2>Las Mejores Ofertas Online en Electrodomésticos, Tecnología y Electrohogar</h2>
+    <p>En MásOnline encontrás las mejores ofertas en electrodomésticos, tecnología y electrohogar con descuentos de hasta el 30%. Desde aires acondicionados split inverter Philco y Hyundai hasta Smart TVs 4K Philips con 20% adicional en 1 pago, calefactores a gas Longvie y caloventores eléctricos Liliana. Todo con financiación en cuotas sin interés y despacho a todo el país.</p>
+    <p>Aprovechá los beneficios bancarios con NaranjaX los martes (hasta 30% OFF), Banco Hipotecario con MODO (25%) y Supervielle para jubilados (20%). Comprá online y retirá gratis en ChangoMás con PickUp.</p>
+    <ul>
+      <li>Aires acondicionados split inverter</li>
+      <li>Heladeras No Frost con descuento</li>
+      <li>Freezers y conservadoras</li>
+      <li>Smart TVs 4K · 20% en 1 pago</li>
+      <li>Celulares Samsung y Motorola</li>
+      <li>Calefactores a gas tiro balanceado</li>
+      <li>Caloventores PTC y convectores</li>
+      <li>6 cuotas sin interés · 12 cuotas NaranjaX</li>
+    </ul>
+  </div>
+</main>
+
+<!-- NEWSLETTER -->
+<div class="nl">
+  <p>Recibí las mejores ofertas antes que nadie</p>
+  <div class="nlf">
+    <input type="email" placeholder="Ingresá tu email">
+    <button type="button">Suscribirme</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <div class="ftg">
+    <div>
+      <h3>Mis Compras</h3>
+      <ul>
+        <li><a href="#">Seguimiento de pedidos</a></li>
+        <li><a href="#">Favoritos</a></li>
+        <li><a href="#">Cambios y devoluciones</a></li>
+        <li><a href="#">Botón de arrepentimiento</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Atención al cliente</h3>
+      <ul>
+        <li><a href="#">0810 444 9256</a></li>
+        <li><a href="#">Contactanos</a></li>
+        <li><a href="#">Preguntas Frecuentes</a></li>
+        <li><a href="#">Sucursales</a></li>
+        <li><a href="#">Métodos de entrega</a></li>
+        <li><a href="#">Folletos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Medios de pago</h3>
+      <div class="plg">
+        <span class="plgi">VISA</span><span class="plgi">Mastercard</span><span class="plgi">MODO</span><span class="plgi">Mercado Pago</span><span class="plgi">CABAL</span><span class="plgi">NaranjaX</span><span class="plgi">Amex</span>
+      </div>
+      <a href="#" style="display:inline-block;margin-top:.8rem;font-size:12px;color:var(--or);font-weight:600;text-decoration:none">Ver promociones bancarias →</a>
+    </div>
+  </div>
+  <div class="ftb">
+    <div class="flg"><span>Más</span><span>Online</span></div>
+    <p class="fcp">© 2026 MásOnline · masonline.com.ar · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.fq').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const it=q.parentElement,op=it.classList.contains('op');
+    document.querySelectorAll('.fi.op').forEach(i=>i.classList.remove('op'));
+    if(!op)it.classList.add('op');
+  });
+});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+document.querySelectorAll('.pi').forEach(p=>{
+  p.addEventListener('click',()=>{
+    document.querySelectorAll('.pi').forEach(x=>x.classList.remove('act'));
+    p.classList.add('act');
+  });
+});
+</script>
+</body>
+</html>
